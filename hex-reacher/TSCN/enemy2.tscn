@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://byvk5hrahs1bl"]
+
+[ext_resource type="Texture2D" uid="uid://b23y3vk4iuat7" path="res://Textures/HexEnemy2.png" id="1_jyw8c"]
+
+[node name="Enemy2" type="Node2D" unique_id=668216977]
+
+[node name="HexEnemy2" type="Sprite2D" parent="." unique_id=3507730]
+z_index = 7
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_jyw8c")

@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://cla4qcvg7gw0j"]
 
+[ext_resource type="Script" uid="uid://b5fnwkls3ypr6" path="res://TSCN/hex_gen.gd" id="1_s20q2"]
+[ext_resource type="Script" uid="uid://bmx6p4ybn6kkh" path="res://TSCN/player_movement.gd" id="2_ljr22"]
+[ext_resource type="Script" uid="uid://dkmxhlwt3mr45" path="res://TSCN/hex_calculations.gd" id="3_dem5q"]
+
 [node name="Node2D" type="Node2D" unique_id=2126918429]
+
+[node name="HexGen" type="Node2D" parent="." unique_id=302295803 node_paths=PackedStringArray("hexCalculationsNode")]
+script = ExtResource("1_s20q2")
+hexCalculationsNode = NodePath("../HexCalculations")
+
+[node name="PlayerMovement" type="Node2D" parent="." unique_id=410013530 node_paths=PackedStringArray("hexGenNode", "hexCalculationsNode")]
+script = ExtResource("2_ljr22")
+hexGenNode = NodePath("../HexGen")
+hexCalculationsNode = NodePath("../HexCalculations")
+
+[node name="HexCalculations" type="Node2D" parent="." unique_id=1439534099]
+script = ExtResource("3_dem5q")

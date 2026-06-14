@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://csvvx0d6fgvf2"]
+
+[ext_resource type="Texture2D" uid="uid://c16j5pivufdcl" path="res://Textures/HexGround.png" id="1_omg0e"]
+
+[node name="Ground" type="Node2D" unique_id=1961297421]
+
+[node name="HexGround" type="Sprite2D" parent="." unique_id=289191047]
+z_index = -5
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_omg0e")

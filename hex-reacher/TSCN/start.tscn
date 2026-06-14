@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dhovn6r5gb5d0"]
+
+[ext_resource type="Texture2D" uid="uid://bpvxduvyu0s6x" path="res://Textures/HexStart.png" id="1_kerui"]
+
+[node name="Start" type="Node2D" unique_id=1134414690]
+
+[node name="HexStart" type="Sprite2D" parent="." unique_id=1293133213]
+z_index = 2
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_kerui")
