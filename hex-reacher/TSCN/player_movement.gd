@@ -27,12 +27,12 @@ func _initial_player_pos() -> void:
 
 func _player_input_action() -> void:
 	if Input.is_action_just_pressed("ui_nw"):
-		if currPlayerPosX % 2 != 0:
+		if currPlayerPosY % 2 != 0:
 			currPlayerPosX -= 1
 		currPlayerPosY -= 1
 		print(str(currPlayerPosX) + ":" + str(currPlayerPosY))
 	elif Input.is_action_just_pressed("ui_ne"):
-		if currPlayerPosX % 2 != 0:
+		if currPlayerPosY % 2 == 0:
 			currPlayerPosX += 1
 		currPlayerPosY -= 1
 		print(str(currPlayerPosX) + ":" + str(currPlayerPosY))
@@ -40,12 +40,13 @@ func _player_input_action() -> void:
 		currPlayerPosX += 1
 		print(str(currPlayerPosX) + ":" + str(currPlayerPosY))
 	elif Input.is_action_just_pressed("ui_se"):
-		if currPlayerPosX % 2 != 0:
+		if currPlayerPosY % 2 == 0:
 			currPlayerPosX += 1
 		currPlayerPosY += 1
 		print(str(currPlayerPosX) + ":" + str(currPlayerPosY))
 	elif Input.is_action_just_pressed("ui_sw"):
-		currPlayerPosX -= 1
+		if currPlayerPosY % 2 != 0:
+			currPlayerPosX -= 1
 		currPlayerPosY += 1
 		print(str(currPlayerPosX) + ":" + str(currPlayerPosY))
 	elif Input.is_action_just_pressed("ui_w"):
